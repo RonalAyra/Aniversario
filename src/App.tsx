@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import { timelineData, photos, message } from './data/anniversaryData';
 import { addMouseHeartEffect, addAnimationStyles } from './utils/animations';
 
+import musica from './assets/musica.mp3';
+
 function App() {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
@@ -25,7 +27,7 @@ function App() {
     addMouseHeartEffect();
     
     // Create audio element
-    const bgMusic = new Audio('https://www.youtube.com/watch?v=St6d4QK8GIU');
+    const bgMusic = new Audio(musica);
     bgMusic.loop = true;
     bgMusic.volume = 0.4;
     setAudio(bgMusic);
